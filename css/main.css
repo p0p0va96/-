@@ -1,0 +1,181 @@
+/* Скидання базових відступів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  color: #333;
+}
+
+/* 
+   Анімований фон:
+   - Використовуємо зображення steam1.jpg (замініть на своє),
+   - Збільшуємо фон (200%),
+   - Анімуємо background-position по обом осям.
+*/
+body {
+  background: url("../img/steam1.jpg") no-repeat center center;
+  background-size: 200% auto;
+  animation: animateBackground 30s ease-in-out infinite alternate;
+}
+
+@keyframes animateBackground {
+  /* Рух з верхнього лівого кута до правого нижнього, потім назад */
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Основний контейнер зі світлою напівпрозорою підкладкою */
+.container {
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px); /* Підтримка залежить від браузера */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки та текст */
+h1 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Блок донату */
+.donation-section {
+  margin-bottom: 30px;
+}
+.donation-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Кнопки зі світлим градієнтом */
+.btn,
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 6px;
+
+  color: #333;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.social-btn:hover {
+  background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  margin-left: 8px;
+}
+
+/* Розділ соцмереж */
+.social-section {
+  margin-top: 20px;
+}
+
+.social-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Адаптивна верстка */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  .btn,
+  .social-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.85rem;
+  }
+  .btn,
+  .social-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.gif-bottom-right {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 150px;
+  z-index: 999;
+  border-radius: 8px;
+}
