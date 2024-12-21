@@ -48,7 +48,8 @@ body {
   align-items: center;
   text-align: center;
 
-  background-color: rgba(255, 255, 255, 0.7);
+  /* Зробили фон більш прозорим */
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px); /* Підтримка залежить від браузера */
   border-radius: 12px;
   padding: 20px;
@@ -150,7 +151,12 @@ p {
   }
 }
 
+/* Для телефонів до 480px */
 @media (max-width: 480px) {
+  /* Робимо фон 'cover', щоб краще адаптувати зображення */
+  body {
+    background-size: cover;
+  }
   h1 {
     font-size: 1.5rem;
   }
