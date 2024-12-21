@@ -16,7 +16,7 @@ body {
    Анімований фон:
    - Використовуємо зображення steam1.jpg (замініть на своє),
    - Збільшуємо фон (200%),
-   - Анімуємо background-position по обом осям.
+   - Анімуємо background-position по обом осях.
 */
 body {
   background: url("../img/steam1.jpg") no-repeat center center;
@@ -150,9 +150,22 @@ p {
     padding: 10px 15px;
     font-size: 0.9rem;
   }
+  /* Адаптація повзунка гучності */
+  .volume-control {
+    top: 60px; /* Зменшуємо відступ */
+    right: 15px; /* Зменшуємо відступ */
+    padding: 4px 8px; /* Зменшуємо внутрішні відступи */
+  }
+
+  .volume-control label {
+    font-size: 0.9rem;
+  }
+
+  #volume-slider {
+    width: 80px; /* Зменшуємо ширину повзунка */
+  }
 }
 
-/* Для телефонів до 480px */
 @media (max-width: 480px) {
   /* Робимо фон 'cover', щоб краще адаптувати зображення */
   body {
@@ -176,6 +189,24 @@ p {
     flex-direction: column;
     align-items: center;
   }
+
+  /* Адаптація повзунка гучності */
+  .volume-control {
+    top: 50px; /* Додаткове зменшення відступу */
+    right: 10px; /* Додаткове зменшення відступу */
+    flex-direction: column; /* Вирівнювання елементів вертикально */
+    align-items: flex-end; /* Вирівнювання по правому краю */
+    padding: 4px 6px; /* Зменшуємо внутрішні відступи */
+  }
+
+  .volume-control label {
+    margin-bottom: 5px; /* Додаємо відступ між лейблом та повзунком */
+    font-size: 0.8rem;
+  }
+
+  #volume-slider {
+    width: 70px; /* Зменшуємо ширину повзунка */
+  }
 }
 
 .gif-bottom-right {
@@ -190,7 +221,7 @@ p {
 /* Стилізація кнопки контролю музики */
 #toggle-music {
   position: fixed;
-  bottom: 20px;
+  top: 20px; /* Змінили з bottom на top */
   right: 20px;
   padding: 10px 15px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -200,6 +231,7 @@ p {
   font-size: 1rem;
   color: #333;
   transition: background-color 0.3s ease;
+  z-index: 1000; /* Забезпечує видимість над іншими елементами */
 }
 
 #toggle-music:hover {
@@ -209,7 +241,7 @@ p {
 /* Стилізація повзунка контролю гучності */
 .volume-control {
   position: fixed;
-  bottom: 70px;
+  top: 70px; /* Змінили з bottom на top */
   right: 20px;
   display: flex;
   align-items: center;
@@ -217,6 +249,7 @@ p {
   padding: 5px 10px;
   border-radius: 5px;
   color: #333;
+  z-index: 1000; /* Забезпечує видимість над іншими елементами */
 }
 
 .volume-control label {

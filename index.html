@@ -16,12 +16,19 @@
     <audio id="background-music" src="./audio/funk.mp3" autoplay loop></audio>
 
     <!-- Кнопка для контролю музики -->
-    <button id="toggle-music">Вимкнути музику</button>
+    <button id="toggle-music" aria-label="Контроль музики">
+        <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" fill="#333" />
+        </svg>
+        <svg id="pause-icon" width="24" height="24" viewBox="0 0 24 24" style="display: none;">
+            <path d="M6 19h4V5H6zm8-14v14h4V5h-4z" fill="#333" />
+        </svg>
+    </button>
 
     <!-- Повзунок для контролю гучності -->
     <div class="volume-control">
         <label for="volume-slider">Гучність:</label>
-        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" aria-label="Повзунок гучності">
     </div>
 
     <div class="container">
