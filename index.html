@@ -12,6 +12,17 @@
 </head>
 
 <body>
+    <!-- Елемент audio для фонової музики -->
+    <audio id="background-music" src="./audio/funk.mp3" autoplay loop></audio>
+
+    <!-- Кнопка для контролю музики -->
+    <button id="toggle-music">Вимкнути музику</button>
+
+    <!-- Повзунок для контролю гучності -->
+    <div class="volume-control">
+        <label for="volume-slider">Гучність:</label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+    </div>
 
     <div class="container">
         <h1>Підтримка стрімера</h1>
@@ -60,9 +71,11 @@
         </div>
         <div>
             <img src="./img/pikachu.gif" alt="GIF" class="gif-bottom-right" width="150" height="150">
-
         </div>
     </div>
+
+    <!-- Підключення скрипту -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

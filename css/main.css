@@ -1,3 +1,4 @@
+/* Скидання базових відступів */
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +9,7 @@ html,
 body {
   height: 100%;
   font-family: "Raleway", sans-serif;
-  /* Робимо текст усього документа білим */
-  color: #fff;
+  color: #fff; /* Робимо текст білим */
 }
 
 /* 
@@ -48,7 +48,7 @@ body {
   align-items: center;
   text-align: center;
 
-  /* Ще більш прозорий білий фон */
+  /* Зробили фон більш прозорим */
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px); /* Підтримка залежить від браузера */
   border-radius: 12px;
@@ -61,22 +61,19 @@ h1 {
   margin-bottom: 16px;
   font-size: 2rem;
   font-weight: 600;
-  /* Білі букви */
-  color: #fff;
+  color: #fff; /* Білі букви */
 }
 
 h3 {
   margin-bottom: 16px;
   font-size: 1.2rem;
-  /* Білі букви */
-  color: #fff;
+  color: #fff; /* Білі букви */
 }
 
 p {
   margin-bottom: 20px;
   line-height: 1.5;
-  /* Білі букви */
-  color: #fff;
+  color: #fff; /* Білі букви */
 }
 
 /* Блок донату */
@@ -87,8 +84,7 @@ p {
 .donation-section h2 {
   margin-bottom: 12px;
   font-size: 1.5rem;
-  /* Білі букви */
-  color: #fff;
+  color: #fff; /* Білі букви */
 }
 
 /* Кнопки зі світлим градієнтом */
@@ -102,8 +98,7 @@ p {
   margin: 5px;
   border-radius: 6px;
 
-  /* Колір і фон для кнопок */
-  color: #333;
+  color: #333; /* Колір тексту кнопок */
   background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -127,8 +122,7 @@ p {
 .social-section h2 {
   margin-bottom: 12px;
   font-size: 1.5rem;
-  /* Білі букви */
-  color: #fff;
+  color: #fff; /* Білі букви */
 }
 
 .social-links {
@@ -191,4 +185,45 @@ p {
   width: 150px;
   z-index: 999;
   border-radius: 8px;
+}
+
+/* Стилізація кнопки контролю музики */
+#toggle-music {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+#toggle-music:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Стилізація повзунка контролю гучності */
+.volume-control {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.volume-control label {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+#volume-slider {
+  width: 100px;
 }
